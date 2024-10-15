@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>UbabilityHub By PTK</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-querys.css"/>
+    <link rel="icon" href="./assets/asset 1.png" type="image/x-icon"> 
 </head>
 
 <body>
@@ -23,7 +25,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 0.png" alt="company-logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links " id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link"> Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -33,6 +35,8 @@
                     <li><a href="#" class="hover-link primary-button">Sign-up </a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i></a>
         </div>
     </nav>
 
@@ -132,7 +136,7 @@
         </div>
     </section>
     <section class="big-features-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container second-big-feature" >
             <div class="feature-image">
                 <img src="./assets/asset 16.png" alt="img" />
             </div>
@@ -237,10 +241,15 @@
         </div>
     </div>
 
-
-
-
     <script src="https://kit.fontawesome.com/b8e4429779.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton=document.getElementById('nav-toggle');
+        const navLinks=document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click',()=>{
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
